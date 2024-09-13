@@ -5,7 +5,7 @@ import ImageGallery from '..//ImageGallery/ImageGallery';
 import Button from '../Button/Button';
 import Loader from '../Loader/Loader';
 import Modal from '../Modal/Modal';
-import styles from './App.module.css';
+
 
 const API_KEY = '44948135-f70b83598142b22294c8ec344';
 const BASE_URL = 'https://pixabay.com/api/';
@@ -58,7 +58,7 @@ const App = () => {
   };
 
   return (
-    <div className={styles.app}>
+    <div>
       <Searchbar onSubmit={handleSearchSubmit} />
       <ImageGallery images={images} onImageClick={openModal} />
       {loading && <Loader />}
